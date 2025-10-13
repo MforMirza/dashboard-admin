@@ -15,7 +15,7 @@
         <h1>Sistem Informasi Perpustakaan</h1>
       </div>
       <div class="user">
-        <img src="gambar profil.png" alt="Profil" class="test-account" />
+        <img src="akun.png" alt="Profil" class="test-account" />
         <span>Admin A</span>
       </div>
     </header>
@@ -25,19 +25,19 @@
       <!-- Sidebar -->
       <div class="navbar">
         <div class="menu active" data-page="dashboard">
-          <img src="home-page.png" alt="Dashboard" />
+          <img src="dashboard.png" alt="Dashboard" />
           <span>Dashboard</span>
         </div>
         <div class="menu" data-page="peminjaman">
-          <img src="Peminjaman Buku.png" alt="Peminjaman Buku" />
+          <img src="akun.png" alt="Peminjaman Buku" />
           <span>Kelola Akun</span>
         </div>
         <div class="menu" data-page="pengembalian">
-          <img src="Pengembalian Buku.png" alt="Pengembalian Buku" />
+          <img src="book.png" alt="Pengembalian Buku" />
           <span>Kelola Buku</span>
         </div>
         <div class="menu logout" data-page="logout">
-          <img src="tombol log out.png" alt="Logout" />
+          <img src="log out.png" alt="Logout" />
           <span>Log Out</span>
         </div>
       </div>
@@ -69,6 +69,43 @@
         <section id="peminjaman" class="page">
           <h2>Halaman Pengelolaan Akun</h2>
           <p>Di sini admin dapat menambah, mengubah, atau menghapus akun pegawai / admin lain.</p>
+
+          <!-- TABEL TAMBAH, UBAH, HAPUS AKUN -->
+          <table class="akun-table">
+            <thead>
+              <tr>
+                <th>No</th>
+                <th>Nama</th>
+                <th>Username</th>
+                <th>Role</th>
+                <th>Aksi</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Muhammad Mirza Fatih</td>
+                <td>Muh_admin</td>
+                <td>Admin</td>
+                <td>
+                  <button class="btn tambah">Tambah</button>
+                  <button class="btn ubah">Ubah</button>
+                  <button class="btn hapus">Hapus</button>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Budi Santoso</td>
+                <td>budi_admin</td>
+                <td>Pegawai</td>
+                <td>
+                  <button class="btn tambah">Tambah</button>
+                  <button class="btn ubah">Ubah</button>
+                  <button class="btn hapus">Hapus</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </section>
 
         <!-- PENGEMBALIAN -->
@@ -76,6 +113,8 @@
           <h2>Halaman Pengelolaan Buku</h2>
           <p>Di sini admin dapat menambah, mengubah, menghapus dan melihat stok buku yang sedang tersedia.</p>
         </section>
+      </main>
+    </div>
 
     <script src="Dashboard Admin.js"></script>
   </body>

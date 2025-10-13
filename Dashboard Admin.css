@@ -52,15 +52,15 @@ body {
 }
 
 .user img {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
 }
 
 /* ===== MAIN CONTAINER ===== */
 .main-container {
   display: flex;
-  margin-top: 70px; /* beri jarak di bawah header */
+  margin-top: 70px;
   height: calc(100vh - 70px);
 }
 
@@ -77,16 +77,26 @@ body {
 .menu {
   display: flex;
   align-items: center;
+  justify-content: space-between; /* teks kiri, ikon kanan */
+  flex-direction: row-reverse; /* balik urutan: ikon ke kanan */
   gap: 10px;
   padding: 14px 20px;
   cursor: pointer;
   font-size: 15px;
   color: #222;
   transition: 0.3s;
+  width: 100%;
+}
+
+.menu span {
+  flex: 1;
+  text-align: left; /* teks rata kiri */
+  margin-left: 0;
 }
 
 .menu img {
   width: 22px;
+  margin-left: auto; /* pastikan ikon ke kanan penuh */
 }
 
 .menu:hover,
@@ -146,6 +156,62 @@ body {
 .card p {
   font-size: 13px;
   color: #333;
+}
+
+/* ===== TABEL PENGELOLAAN AKUN ===== */
+.akun-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 25px; /* jarak dari paragraf atas */
+  background-color: #fffdf8;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.akun-table th,
+.akun-table td {
+  border: 1px solid #d6d0c0;
+  padding: 12px 15px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.akun-table th {
+  background-color: #f1ece0;
+  font-weight: 600;
+  color: #222;
+}
+
+.akun-table tr:nth-child(even) {
+  background-color: #f9f5ec;
+}
+
+/* ===== Tombol Aksi ===== */
+.btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.3s;
+  color: #fff;
+}
+
+.btn.tambah {
+  background-color: #4caf50;
+}
+
+.btn.ubah {
+  background-color: #2196f3;
+}
+
+.btn.hapus {
+  background-color: #f44336;
+}
+
+.btn:hover {
+  opacity: 0.8;
 }
 
 /* Animasi transisi */
