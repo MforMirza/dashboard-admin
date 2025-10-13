@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f9f5ec;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* ===== HEADER ===== */
+.header {
+  height: 70px;
+  background-color: #f9f5ec;
+  border-bottom: 1px solid #d6d0c0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-sipus {
+  width: 45px;
+  border-radius: 50%;
+}
+
+.header h1 {
+  font-size: 20px;
+  color: #002b5b;
+  font-weight: 600;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+}
+
+.user img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+/* ===== MAIN CONTAINER ===== */
+.main-container {
+  display: flex;
+  margin-top: 70px; /* beri jarak di bawah header */
+  height: calc(100vh - 70px);
+}
+
+/* ===== SIDEBAR ===== */
+.navbar {
+  width: 230px;
+  background-color: #d6d0c0;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  border-right: 1px solid #ccc;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 20px;
+  cursor: pointer;
+  font-size: 15px;
+  color: #222;
+  transition: 0.3s;
+}
+
+.menu img {
+  width: 22px;
+}
+
+.menu:hover,
+.menu.active {
+  background-color: #f5efe4;
+  border-left: 5px solid #002b5b;
+}
+
+.logout {
+  margin-top: auto;
+  background-color: #f1ece0;
+}
+
+/* ===== CONTENT AREA ===== */
+.content {
+  flex: 1;
+  padding: 25px 40px;
+  overflow-y: auto;
+}
+
+.page {
+  display: none;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.page.active {
+  display: block;
+}
+
+/* ===== DASHBOARD CARDS ===== */
+.card-container {
+  display: flex;
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.card {
+  flex: 1;
+  background-color: #dce7ff;
+  border-radius: 10px;
+  text-align: center;
+  padding: 30px 20px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.card h1 {
+  font-size: 36px;
+  color: #000;
+  margin-bottom: 5px;
+}
+
+.card p {
+  font-size: 13px;
+  color: #333;
+}
+
+/* Animasi transisi */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .navbar {
+    width: 180px;
+  }
+  .content {
+    padding: 20px;
+  }
+  .header h1 {
+    font-size: 16px;
+  }
+}

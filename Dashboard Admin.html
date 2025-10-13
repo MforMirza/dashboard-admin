@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard Admin | SIPUS</title>
+    <link rel="stylesheet" href="Dashboard Admin.css" />
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="header-left">
+        <img class="logo-sipus" src="sipus.png" alt="Logo SIPUS" />
+        <h1>Sistem Informasi Perpustakaan</h1>
+      </div>
+      <div class="user">
+        <img src="gambar profil.png" alt="Profil" class="test-account" />
+        <span>Admin A</span>
+      </div>
+    </header>
+
+    <!-- Container utama -->
+    <div class="main-container">
+      <!-- Sidebar -->
+      <div class="navbar">
+        <div class="menu active" data-page="dashboard">
+          <img src="home-page.png" alt="Dashboard" />
+          <span>Dashboard</span>
+        </div>
+        <div class="menu" data-page="peminjaman">
+          <img src="Peminjaman Buku.png" alt="Peminjaman Buku" />
+          <span>Kelola Akun</span>
+        </div>
+        <div class="menu" data-page="pengembalian">
+          <img src="Pengembalian Buku.png" alt="Pengembalian Buku" />
+          <span>Kelola Buku</span>
+        </div>
+        <div class="menu logout" data-page="logout">
+          <img src="tombol log out.png" alt="Logout" />
+          <span>Log Out</span>
+        </div>
+      </div>
+
+      <!-- Halaman Konten -->
+      <main class="content">
+        <!-- DASHBOARD -->
+        <section id="dashboard" class="page active">
+          <div class="card-container">
+            <div class="card">
+              <h3>Total Buku</h3>
+              <h1 id="count-pinjaman">6</h1>
+              <p>Jumlah Buku Dalam Sistem</p>
+            </div>
+            <div class="card">
+              <h3>Total Akun</h3>
+              <h1 id="count-dipinjam">3</h1>
+              <p>Jumlah Akun Dalam Sistem</p>
+            </div>
+            <div class="card">
+              <h3>Aktivitas Hari Ini</h3>
+              <h1 id="count-dikembalikan">2</h1>
+              <p>Jumlah Aktivitas Hari ini Dalam Sistem</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- PEMINJAMAN -->
+        <section id="peminjaman" class="page">
+          <h2>Halaman Pengelolaan Akun</h2>
+          <p>Di sini admin dapat menambah, mengubah, atau menghapus akun pegawai / admin lain.</p>
+        </section>
+
+        <!-- PENGEMBALIAN -->
+        <section id="pengembalian" class="page">
+          <h2>Halaman Pengelolaan Buku</h2>
+          <p>Di sini admin dapat menambah, mengubah, menghapus dan melihat stok buku yang sedang tersedia.</p>
+        </section>
+
+    <script src="Dashboard Admin.js"></script>
+  </body>
+</html>
